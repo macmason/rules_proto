@@ -261,7 +261,7 @@ def io_bazel_rules_python(**kwargs):
     """
     name = "io_bazel_rules_python"
     ref = get_ref(name, "6360b65f8d36ce1616a4583b2e93499ba95c9018", kwargs)  # 2019-03-07
-    github_archive("rules_pythonn", "macmason", "rules_python", ref, "")
+    github_archive("rules_python", "macmason", "rules_python", ref, "")
 
 def six(**kwargs):
     name = "six"
