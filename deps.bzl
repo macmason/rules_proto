@@ -40,7 +40,7 @@ cc_library(
 )
 """
 
-def github_archive(name, org, repo, ref, sha256):
+def github_archive(name, org, repo, ref, sha256=None):
     """Declare an http_archive from github
     """
 
@@ -260,9 +260,8 @@ def io_bazel_rules_python(**kwargs):
     """python Rules
     """
     name = "io_bazel_rules_python"
-    ref = get_ref(name, "965d4b4a63e6462204ae671d7c3f02b25da37941", kwargs)  # 2019-03-07
-    sha256 = get_sha256(name, "3e55ec4f7e151b048e950965f956c1e0633fc76449905f40dba671574eac574c", kwargs)
-    github_archive(name, "bazelbuild", "rules_python", ref, sha256)
+    ref = get_ref(name, "6360b65f8d36ce1616a4583b2e93499ba95c9018", kwargs)  # 2019-03-07
+    github_archive(name, "macmason", "rules_python", ref, "")
 
 def six(**kwargs):
     name = "six"
